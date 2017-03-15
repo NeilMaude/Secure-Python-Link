@@ -117,36 +117,3 @@ print('Keys: ', user_key, pass_key)
 success, name, password2 = get_account_details(user_key, pass_key, file)
 print('Retrieved: ', name, password2)
 
-
-
-# print('Some random characters: ', random_chars(25))
-# secret = 'Hello!'
-# print('Secret   : ', secret)
-# key = random_chars(len(secret))
-# print('Key      : ', key)
-# success, encrypted = string_XOR(secret, key)
-# print('Encrypted: ', encrypted)
-# success, decrypted = string_XOR(encrypted, key)
-# print('Decrypted: ', decrypted)
-#
-# a, b = 'Left', 'Right'
-# val_list = [a] + [b]
-# sFile = 'test.p'
-# print(save_values(sFile, val_list))
-# in_list = load_values(sFile)
-# print('Retrieved values: ', in_list[0], in_list[1])
-#
-# print()
-# padded = pad_string('Hello',10)
-# print('Pad string (Hello,10):', padded, len(padded))
-
-# print()
-# print('Encryption test')
-# random_key = random_chars(100)
-# message = 'Hello World!'
-# success, encrypted = encrypt_string(message, 100, random_key)
-# print('Response: ', success, encrypted)
-#
-# print()
-# success, decrypted = retrieve_string(encrypted, random_key)
-# print('Response to retrieval: ', success, decrypted)
