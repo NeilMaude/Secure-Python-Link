@@ -16,15 +16,23 @@ username/password in clear within the Python scripts.
 
 Hence the protocol is as follows:
 
-*Create the username/password pairing
-*Run the `secure_account()` function to store the user/password
-*Record the keys returned
-*When calling Python programs pass the keys
-*The Python progam recovers the username/password using those keys
+* Create the username/password pairing
+* Run the `secure_account()` function to store the user/password
+* Record the keys returned
+* When calling Python programs pass the keys
+* The Python progam recovers the username/password using those keys
 
 This allows the username and password to be held in a persistent file
 (a pickle file) and for anyone configuring the calling process to not
 have direct database access (just these API-style keys).
+
+_Why not just pass the user/password from the main application at run 
+time?_ This would be possible, but the calling application would then 
+have credentials all over the place in the configuration (and yes, it
+will now have keys all over the place).  However, there's every 
+opportunity to (a) centrally store the keys on the **mstore** side and
+(b) at some point that process will be cross-machine and so we don't 
+want credentials passed in clear over a network.
 
 ## Security
 It is assumed that a bad actor may have access to the Python scripts 
@@ -45,7 +53,7 @@ cause me a few concerns in development and I had to spend a little time
 staring at the code to satisfy myself that this (really useful) record
 of the length of each string was not making the system crackable.
 
-Note: one way I can think of to break this encryyption would be a brute
+Note: one way I can think of to break this encryption would be a brute
 force attack to find strings of alpha characters which look like a user
 name - it's fairly likely that user names will not have non-alpha 
 characters. Use of OTP makes every user name equally likely, so there 
