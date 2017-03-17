@@ -32,7 +32,8 @@ have credentials all over the place in the configuration (and yes, it
 will now have keys all over the place).  However, there's every 
 opportunity to (a) centrally store the keys on the **mstore** side and
 (b) at some point that process will be cross-machine and so we don't 
-want credentials passed in clear over a network.
+want credentials passed in clear over a network.  This also allows 
+some segmentation of the teams doing each piece of development.
 
 ## Security
 It is assumed that a bad actor may have access to the Python scripts 
