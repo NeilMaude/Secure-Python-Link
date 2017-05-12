@@ -108,12 +108,12 @@ def get_account_details(user_key, pass_key, file):
     else:
         return False, '', ''
 
-# Unit testing
-user = 'Neil'
-password = 'SomethingElse'
-file = 'Account1.p'
-success, user_key, pass_key = secure_account(user, password, file)
-print('Keys: ', user_key, pass_key)
-success, name, password2 = get_account_details(user_key, pass_key, file)
-print('Retrieved: ', name, password2)
+# # Unit testing
+# user = 'Neil'
+# password = 'SomethingElse'
+# file = 'Account1.p'
+# success, user_key, pass_key = secure_account(user, password, file)
+# print('Keys: ', user_key, pass_key)
+# success, name, password2 = get_account_details(user_key, pass_key, file)
+# print('Retrieved: ', name, password2)
 
