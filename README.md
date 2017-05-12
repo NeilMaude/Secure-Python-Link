@@ -3,7 +3,8 @@
 This is a set of tools to allow a calling process to pass credentials 
 to a Python script securely.  
 
-Requires Python 3.5.
+Python 3.5 for main version.
+Python 2.7 for "2" versions (scripts ending in ..2.py)
 
 ## Purpose
 The motivation for this code is to allow calling of Python scripts 
